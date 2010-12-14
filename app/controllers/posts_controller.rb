@@ -14,6 +14,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         format.html { redirect_to(posts_url, :notice => 'Post was successfully created.') }
+        format.js
       else
         format.html { redirect_to(posts_url) }
       end
